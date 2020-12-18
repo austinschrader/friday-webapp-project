@@ -1,0 +1,20 @@
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
+
+namespace ForSale
+{
+  public class Program
+  {
+    public static void Main(string[] args)
+    {
+      var host = new WebHostBuilder()
+        .UseKestrel()
+        .UseContentRoot(Directory.GetCurrentDirectory())
+        .UseIISIntegration()
+        .UseStartup<StartupBase>()
+        .Build();
+
+      host.Run();
+    }
+  }
+}
