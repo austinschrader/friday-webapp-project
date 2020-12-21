@@ -20,9 +20,9 @@ namespace ForSale.Controllers
     }
 
     [HttpPost("/vendors")]
-    public ActionResult Create(string name, string description, string contact)
+    public ActionResult Create(string name)
     {
-      Vendor newVendor = new Vendor(name, description, contact);
+      Vendor newVendor = new Vendor(name);
       return RedirectToAction("Index");
     }
 
