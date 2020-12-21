@@ -1,5 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ForSale;
+using ForSale.Models;
 
 namespace ForSale.Tests
 {
