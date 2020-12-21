@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace ForSale
+namespace ForSale.Models
 {
   public class Order
   {
