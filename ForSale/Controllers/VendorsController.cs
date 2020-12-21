@@ -29,8 +29,12 @@ namespace ForSale.Controllers
     [HttpGet("/vendors/{id}")]
     public ActionResult Show(int id)
     {
-      Vendor foundVendor = Vendor.Find(id);
-      return View(foundVendor);
+      Dictionary<string, object> model = new Dictionary<string, object>();
+      Vendor myVendor = Vendor.Find(id);
+      List<Order> vendorOrders = myVendor.Orders;
+      model.Add("vendor", myVendor);
+      model.Add("orders", vendorOrders);
+      return View(model);
     }
   }
 
