@@ -15,5 +15,10 @@ namespace ForSale.Models
       Id = _instances.Count;
     }
 
+    public static List<Orders> GetAll()
+    {
+      return _instances;
+    }
+
   }
 }
