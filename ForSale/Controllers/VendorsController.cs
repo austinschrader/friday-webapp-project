@@ -36,6 +36,20 @@ namespace ForSale.Controllers
       model.Add("orders", vendorOrders);
       return View(model);
     }
+
+    [HttpPost("/vendors/{vendorId}/orders")]
+    public ActionResult Create(int vendorId, string orderDescription)
+    {
+      Dictionary<string, object> model = new Dictionary<string, object>();
+      Vendor myVendor = Vendor.Find(vendorId);
+      Order myOrder = new Order(orderDescription);
+      myVendor.AddOrder(myOrder);
+      List<Order> vendorOrders = myVendor.Orders;
+      model.Add("orders", vendorOrders);
+      model.Add("vendor", myVendor);
+      return View("Show", model);
+    }
+
   }
 
 }
