@@ -1,22 +1,19 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
-using ForSale.Models;
-using System;
+using ForSale;
 
-namespace Order.Tests
+namespace ForSale.Tests
 {
   [TestClass]
-  public class OrderTest : IDisposable
+  public class OrderTest
   {
-    public void Dispose()
-    {
-      ForSale.ClearAll();
-    }
 
     [TestMethod]
-    public void ForSaleConstructor_CreatesInstanceOfOrder_Order()
+    public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
-
+      Order newOrder = new Order("pastries");
+      string myOrder = "pastries";
+      Assert.AreEqual(typeof(Order), newOrder.GetType());
+      Assert.AreEqual(myOrder, newOrder.Description);
     }
   }
 }
