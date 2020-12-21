@@ -18,6 +18,13 @@ namespace ForSale.Controllers
     {
       return View();
     }
+
+    [HttpPost("/vendors")]
+    public ActionResult Create(string name, string description, string contact)
+    {
+      Vendor newVendor = new Vendor(name, description, contact);
+      return RedirectToAction("Index");
+    }
   }
 
 }
