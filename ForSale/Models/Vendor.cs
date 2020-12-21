@@ -19,5 +19,9 @@ namespace ForSale.Models
       Id = _instances.Count;
     }
 
+    public static List<Vendor> GetAll()
+    {
+      return _instances;
+    }
   }
 }
