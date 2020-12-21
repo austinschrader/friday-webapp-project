@@ -11,7 +11,7 @@ namespace ForSale
         .UseKestrel()
         .UseContentRoot(Directory.GetCurrentDirectory())
         .UseIISIntegration()
-        .UseStartup<StartupBase>()
+        .UseStartup<Startup>()
         .Build();
 
       host.Run();

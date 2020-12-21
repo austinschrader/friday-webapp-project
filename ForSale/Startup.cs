@@ -1,4 +1,3 @@
-using System;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -12,8 +11,8 @@ namespace ForSale
     public Startup(IHostingEnvironment env)
     {
       var builder = new ConfigurationBuilder()
-        .SetBasePath(env.ContentRootPath)
-        .AddEnvironmentVariables();
+          .SetBasePath(env.ContentRootPath)
+          .AddEnvironmentVariables();
       Configuration = builder.Build();
     }
 
@@ -34,14 +33,14 @@ namespace ForSale
       {
         routes.MapRoute(
           name: "default",
-          template: "{controller=Home}/{action=Index}/{id}");
+          template: "{controller=Home}/{action=Index}/{id?}");
       });
 
       app.Run(async (context) =>
       {
         await context.Response.WriteAsync("Something went wrong!");
       });
-    }
 
+    }
   }
 }
