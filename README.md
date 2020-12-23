@@ -18,7 +18,6 @@ _C# and .NET needs to be installed for this project to work. If you do not have 
 4. Type in `dotnet restore` to download necessary packages
 5. Then type in `dotnet run` to run the application
 6. Congratulations, this is the program!
-7. To get an output, enter 3 values one-at-a-time
 
 ## Specs
 

@@ -1,20 +1,14 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
 using ForSale.Models;
-using System;
 
 namespace Vendor.Tests
 {
   [TestClass]
-  public class VendorTest : IDisposable
+  public class VendorTest
   {
-    public void Dispose()
-    {
-      ForSale.ClearAll();
-    }
 
     [TestMethod]
-    public void ForSaleConstructor_CreatesInstanceOfVendor_Vendor()
+    public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
     {
 
     }
