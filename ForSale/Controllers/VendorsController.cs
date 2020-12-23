@@ -38,11 +38,11 @@ namespace ForSale.Controllers
     }
 
     [HttpPost("/vendors/{vendorId}/orders")]
-    public ActionResult Create(int vendorId, string orderDescription)
+    public ActionResult Create(int vendorId, string title, string description, int price, string date)
     {
       Dictionary<string, object> model = new Dictionary<string, object>();
       Vendor myVendor = Vendor.Find(vendorId);
-      Order myOrder = new Order(orderDescription);
+      Order myOrder = new Order(title, description, price, date);
       myVendor.AddOrder(myOrder);
       List<Order> vendorOrders = myVendor.Orders;
       model.Add("orders", vendorOrders);
