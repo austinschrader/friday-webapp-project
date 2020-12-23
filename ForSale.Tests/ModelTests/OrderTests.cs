@@ -8,12 +8,21 @@ namespace ForSale.Tests
   {
 
     [TestMethod]
-    public void OrderConstructor_CreatesInstanceOfOrder_Order()
+    public void OrderConstructor_CreatesInstanceOfOrder_OrderTitle()
     {
-      Order newOrder = new Order("pastries");
-      string myOrder = "pastries";
+      Order newOrder = new Order("Order One", "Pastries order", 50, "12/22/2020");
+      string myOrder = "Order One";
       Assert.AreEqual(typeof(Order), newOrder.GetType());
-      Assert.AreEqual(myOrder, newOrder.Description);
+      Assert.AreEqual(myOrder, newOrder.Title);
     }
+
+    // [TestMethod]
+    // public void OrderConstructor_CreatesInstanceOfOrder_OrderDescription()
+    // {
+    //   Order newOrder = new Order("Order One", "Pastries order", 50, "12/22/2020");
+    //   string myOrder = "Pastries order";
+    //   Assert.AreEqual(typeof(Order), newOrder.GetType());
+    //   Assert.AreEqual(myOrder, newOrder.Description);
+    // }
   }
 }
