@@ -16,8 +16,9 @@ _C# and .NET needs to be installed for this project to work. If you do not have 
 2. Navigate to the folder where it downloaded
 3. Now open your terminal and navigate to ForSale.Solution > ForSale.Tests
 4. Type in `dotnet restore` to download necessary packages
-5. Then type in `dotnet run` to run the application
-6. Congratulations, this is the program!
+5. Navigate to ForSale.Solution > ForSale
+6. Then type in `dotnet run` to run the application
+7. Congratulations, this is the program!
 
 ## Specs
 
